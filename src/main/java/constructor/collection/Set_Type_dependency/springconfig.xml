@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="ipl" class="constructor.collection.Set_Type_dependency.Ipl">
+		<!-- order is very important here -->
+		<constructor-arg value="RCB"></constructor-arg>
+		<constructor-arg value="Virat"></constructor-arg>
+		<constructor-arg>
+			<set>
+				<value>Maxwell</value>
+				<value>AB_Devillers</value>
+				<value>KL_Rahul</value>
+				<value>Mohammed_Shami</value>
+				<value>Chris_Gayle</value>
+			</set>
+		</constructor-arg>
+	</bean>
+	
+</beans>

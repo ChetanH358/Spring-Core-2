@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!-- value as element in constructor injection -->
+	<!-- <bean name="abc" class="constructor.primitive_dependency.Employee">  -->
+		<!-- follow order of depedencies of employee class -->
+	<!-- 	<constructor-arg>
+			<value>111</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>Smith</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>9000.65</value>
+		</constructor-arg>
+	</bean>  -->
+		
+	<!-- value as attribute in constructor injuction -->
+	<!-- <bean name="abc" class="constructor.primitive_dependency.Employee">
+	<constructor-arg value="111"></constructor-arg>
+	<constructor-arg value="Smith"></constructor-arg>
+	<constructor-arg value="8000.64"></constructor-arg>
+	</bean> -->
+	
+	<!-- value as C-schema in constructor injuction -->
+	<!-- IMP:- copy the p-schema configuration line number(5) and change to c-schema(6) -->
+	<bean name="abc" class="constructor.primitive_dependency.Employee" c:empid="120" c:empname="Smith" c:salary="5000.75"></bean>
+	<bean name="pqr" class="constructor.primitive_dependency.Employee" c:empid="130" c:empname="Rohan" c:salary="9500.45"></bean>
+	
+</beans>
